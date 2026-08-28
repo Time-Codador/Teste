@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/produtos")
-public class ProdutoControler {
+@RequestMapping("/usuario")
+public class UsuarioControler {
 
-    List<Produtos> ps = new ArrayList<>();
+    List<Usuario> ps = new ArrayList<>();
 
     @PostMapping
-    public ResponseEntity<?> salvarProduto(@RequestBody Produtos produtoDs) {
-        ps.add(produtoDs);
-        System.out.println("Dispositivo móvel enviou: " + produtoDs.nome());
+    public ResponseEntity<?> salvarUsuario(@RequestBody Usuario usuarioDs) {
+        ps.add(usuarioDs);
+        System.out.println("Dispositivo móvel enviou: " + usuarioDs.nome());
 
         return ResponseEntity.status(HttpStatus.CREATED).body(ps);
     }
